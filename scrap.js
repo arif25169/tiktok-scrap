@@ -30,6 +30,7 @@ require('dotenv').config();
     const browser = await puppeteer.launch({ headless: false });
     const page = await browser.newPage();
 
+    // Currently Disabled
     async function loginToTikTok() {
         try {
             const loginUrl = 'https://www.tiktok.com/login/phone-or-email/email';
