@@ -30,10 +30,10 @@ function ChartView() {
 
   const config = {
     data,
-    xField: 'username',   
-    yField: 'count',      
+    xField: 'username',
+    yField: 'count',
     seriesField: 'type',
-    isStack: false,   
+    isStack: false,
     label: {
       position: 'middle',
       style: {
@@ -55,6 +55,12 @@ function ChartView() {
 
   return (
     <>
+      <span>
+        List of Data: <br />
+        - Have at least 100k followers. <br />
+        - Have received over 1 million like 
+      </span>
+
       <h3>
         <Link to={'/table'} unstable_viewTransition>
           Table  View
@@ -63,7 +69,7 @@ function ChartView() {
       <div style={{ width: '100%', height: '500px', overflowX: 'auto' }}>
         <Column
           {...config}
-          width={1000} 
+          width={1000}
           height={500}
         />
       </div>
